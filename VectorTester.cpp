@@ -49,7 +49,7 @@ int main()
 	throw dv.get(-1);
    }
    catch (...) {
-	std::cout << "Caught index out of bounds exception from get()." << std::endl;
+	std::cout << "Caught out_of_range exception from get()." << std::endl;
    }	  
 
    //-------------------------------------------------------------------------
