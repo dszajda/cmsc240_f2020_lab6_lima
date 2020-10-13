@@ -24,13 +24,13 @@ double DoubleVector::get(int index)
 // otherwise, use push_back to append to the end of the vector
 void DoubleVector::put(double value, int index)
 {
-   if(index < doubleVector.size())
+   if((unsigned int)index < doubleVector.size())
    {
 	doubleVector.at(index) = value;
    }
    else
    {
-	doubleVecotr.push_back(value);
+	doubleVector.push_back(value);
    }
 }
 
@@ -46,7 +46,7 @@ void DoubleVector::appendCharacterVector(CharacterVector& characterVector)
 {
    for(int i = 0; i < characterVector.size(); i++)
    {
-	doubleVector.push_back(static_cast<double>characterVector.at(i));
+	doubleVector.push_back(static_cast<double>(characterVector.get(i)));
    }
 }
 
@@ -56,7 +56,7 @@ void DoubleVector::appendIntegerVector(IntegerVector& integerVector)
 {
    for(int i = 0; i < integerVector.size(); i++)
    {
-        doubleVector.push_back(static_cast<double>integerVector.at(i));
+        doubleVector.push_back(static_cast<double>(integerVector.get(i)));
    }
 }
 

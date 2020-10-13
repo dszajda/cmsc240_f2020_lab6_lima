@@ -24,27 +24,27 @@ char CharacterVector::get(int index)
 // otherwise, use push_back to append to the end of the vector
 void CharacterVector::put(char value, int index)
 {
-   return 0;
+   
 }
 
 // use push_back to append
 void CharacterVector::put(char value)
 {
-   return 0;
+   
 }
 
 // for each double in doubleVector, use static_cast<char> to append as a
 // character to characterVector
 void CharacterVector::appendDoubleVector(DoubleVector& doubleVector)
 {
-   return 0;
+   
 }
 
 // for each integer in integerVector, use static_cast<char> to append as a
 // character to characterVector
 void CharacterVector::appendIntegerVector(IntegerVector& integerVector)
 {
-   return 0;
+  
 }
 
 #endif
