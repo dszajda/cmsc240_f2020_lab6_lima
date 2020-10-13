@@ -34,14 +34,14 @@ int main()
    std::cout << dv.get(0) << dv.get(1) << dv.get(2) << std::endl;
    std::cout << "Should be: HI!" << std::endl;
    
-   std::cout << dv.size() << endl;
-   std::cout << "Should be: 3" << endl;
+   std::cout << dv.size() << std::endl;
+   std::cout << "Should be: 3" << std::endl;
 
    try {
 	throw dv.get(-1);
    }
    catch (double e) {
-	std::cout << "Index " << e << "out of bounds." << endl;
+	std::cout << "Index " << e << "out of bounds." << std::endl;
    }	  
 
    //-------------------------------------------------------------------------
