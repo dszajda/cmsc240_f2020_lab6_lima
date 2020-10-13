@@ -26,25 +26,28 @@ int main()
    std::cout << "-------------" << std::endl;
    std::cout << "DoubleVector:" << std::endl;
    std::cout << "-------------" << std::endl;
+   //test put() without an index
+   dv.put(121.0);
+   dv.put(97.0);
 
+   // test get() with valid indices
+      std::cout << "Output: " << dv.get(0) << " " << dv.get(1) << " [121 97]" << std::endl;
+      std::cout << std::endl;  
+
+   // test put() with a given index
    dv.put(72.0, 0);
-   dv.put(73.0);
-   dv.put(33.0, 2);
-   
-   std::cout << "Output:" << std::endl;
-   std::cout << dv.get(0) << std::endl;
-   std::cout << dv.get(1) << std:: endl;
-   std::cout << dv.get(2) << std::endl;
-   std::cout << "Should be:" << std::endl;
-   std::cout << "72" << std::endl;
-   std::cout << "73" << std::endl;
-   std::cout << "33" << std::endl;
+   dv.put(33.0, 1);
+   dv.put(105.0, 1);
+
+   // test get() with valid indices   
+   std::cout << "Output: " << dv.get(0) << " " << dv.get(1) << " " << dv.get(2) << " " << dv.get(3) << " " << dv.get(4) << " [72 105 33 121 97]" << std::endl;
    std::cout << std::endl;
  
-   std::cout << "Size of DoubleVector: " << dv.size() << std::endl;
-   std::cout << "Should be: 3" << std::endl;
+   // test size()
+   std::cout << "Size of DoubleVector: " << dv.size() << "[5]" << std::endl;
    std::cout << std:: endl;
 
+   // test get() with invalid index to catch out_of_range exception 
    try {
 	throw dv.get(-1);
    }
@@ -109,6 +112,24 @@ int main()
    std::cout << "-------------------------" << std::endl;
    std::cout << "appended-to DoubleVector:" << std::endl;
    std::cout << "-------------------------" << std::endl;
+   
+   // test appending IntegerVector to DoubleVector
+   dv2.appendIntegerVector(iv);
+   for(int i = 0; i < dv2.size(); i++)
+   {
+	std::cout << dv2.get(i) << " ";
+   }
+   std::cout << std::endl;
+   std::cout << "[expected value depends on value of iv from above]" << std::endl;
+
+   // test appending CharacterVector to DoubleVector
+   dv2.appendCharacterVector(cv);
+   for(int i = 0; i < dv2.size(); i++)
+   {
+        std::cout << dv2.get(i) << " ";
+   }
+   std::cout << std::endl;
+   std::cout << "[expected value depends on value of cv from above]" << std::endl;
 
    //-------------------------------------------------------------------------
 
