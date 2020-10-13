@@ -27,6 +27,23 @@ int main()
    std::cout << "DoubleVector:" << std::endl;
    std::cout << "-------------" << std::endl;
 
+   dv.put(72.0, 0);
+   dv.put(73.0);
+   dv.put(33.0);
+   
+   std::cout << dv.get(0) << dv.get(1) << dv.get(2) << std::endl;
+   std::cout << "Should be: HI!" << endl;
+   
+   std::cout << dv.size(); << endl;
+   std::cout << "Should be: 3" << endl;
+
+   try {
+	dv.get(-1);
+   }
+   catch (exception& e) {
+	std::cout << "Std exception: " << e.what() << endl;
+   }	  
+
    //-------------------------------------------------------------------------
 
    // test IntegerVector: put, get, size, out_of_range
