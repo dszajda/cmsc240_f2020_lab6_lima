@@ -62,9 +62,7 @@ int main()
    std::cout << "get(1): " << iv.get(1) << "[2]" << std::endl;
    std::cout << "get(2): " << iv.get(2) << "[1]" << std::endl;
    std::cout << "get(3): " << iv.get(3) << "[11]" << std::endl;
-//   std::cout << "testing why size doesn't work..." << std::endl;
-    std::cout << "get(4): " << iv.get(4) << "[12]" <<  std::endl;
-//   std::cout << "get(5): " << iv.get(5) << std::endl;
+   std::cout << "get(4): " << iv.get(4) << "[12]" <<  std::endl;
    std::cout << "size(): " << iv.size() << "[5]" << std::endl;
 
    //-------------------------------------------------------------------------
@@ -96,7 +94,14 @@ int main()
    std::cout << "--------------------------" << std::endl;
    std::cout << "appended-to IntegerVector:" << std::endl;
    std::cout << "--------------------------" << std::endl;
-
+   
+//append double vector, dv
+   iv2.appendDoubleVector(*dv); //double check whether or not it's pointer
+   std::cout << "iv2 after appending double vector: " << "[expected depends on state of dv]" <<endl;
+   
+//append character vector, cv
+    iv2.appendCharacterVector(*cv);
+    std::cout << "iv2 after appending character vector: " << "[expected depends on state of cv]" <<endl;
    //-------------------------------------------------------------------------
 
    return 0;
