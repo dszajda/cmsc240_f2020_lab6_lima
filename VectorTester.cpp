@@ -39,9 +39,11 @@ int main()
    std::cout << "72" << std::endl;
    std::cout << "73" << std::endl;
    std::cout << "33" << std::endl;
-   
+   std::cout << std::endl;
+ 
    std::cout << "Size of DoubleVector: " << dv.size() << std::endl;
    std::cout << "Should be: 3" << std::endl;
+   std::cout << std:: endl;
 
    try {
 	throw dv.get(-1);
