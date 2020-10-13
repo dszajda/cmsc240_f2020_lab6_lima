@@ -142,11 +142,11 @@ int main()
    std::cout << "--------------------------" << std::endl;
    
 //append double vector, dv
-   iv2.appendDoubleVector(*dv); //double check whether or not it's pointer
+   iv2.appendDoubleVector(dv); //double check whether or not it's pointer
    std::cout << "iv2 after appending double vector: " << "[expected depends on state of dv]" <<endl;
    
 //append character vector, cv
-    iv2.appendCharacterVector(*cv);
+    iv2.appendCharacterVector(cv);
     std::cout << "iv2 after appending character vector: " << "[expected depends on state of cv]" <<endl;
    //-------------------------------------------------------------------------
 
