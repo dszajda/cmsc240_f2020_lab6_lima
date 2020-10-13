@@ -29,19 +29,25 @@ int main()
 
    dv.put(72.0, 0);
    dv.put(73.0);
-   dv.put(33.0);
+   dv.put(33.0, 2);
    
-   std::cout << dv.get(0) << dv.get(1) << dv.get(2) << std::endl;
-   std::cout << "Should be: HI!" << std::endl;
+   std::cout << "Output:" << std::endl;
+   std::cout << dv.get(0) << std::endl;
+   std::cout << dv.get(1) << std:: endl;
+   std::cout << dv.get(2) << std::endl;
+   std::cout << "Should be:" << std::endl;
+   std::cout << "72" << std::endl;
+   std::cout << "73" << std::endl;
+   std::cout << "33" << std::endl;
    
-   std::cout << dv.size() << std::endl;
+   std::cout << "Size of DoubleVector: " << dv.size() << std::endl;
    std::cout << "Should be: 3" << std::endl;
 
    try {
 	throw dv.get(-1);
    }
-   catch (double e) {
-	std::cout << "Index " << e << "out of bounds." << std::endl;
+   catch (...) {
+	std::cout << "Caught index out of bounds exception from get()." << std::endl;
    }	  
 
    //-------------------------------------------------------------------------
