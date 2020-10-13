@@ -32,16 +32,16 @@ int main()
    dv.put(33.0);
    
    std::cout << dv.get(0) << dv.get(1) << dv.get(2) << std::endl;
-   std::cout << "Should be: HI!" << endl;
+   std::cout << "Should be: HI!" << std::endl;
    
-   std::cout << dv.size(); << endl;
+   std::cout << dv.size() << endl;
    std::cout << "Should be: 3" << endl;
 
    try {
-	dv.get(-1);
+	throw dv.get(-1);
    }
-   catch (exception& e) {
-	std::cout << "Std exception: " << e.what() << endl;
+   catch (double e) {
+	std::cout << "Index " << e << "out of bounds." << endl;
    }	  
 
    //-------------------------------------------------------------------------
