@@ -31,7 +31,7 @@ int main()
    dv.put(97.0);
 
    // test get() with valid indices
-      std::cout << "Output: " << dv.get(0) << " " << dv.get(1) << " [121 97]" << std::endl;
+      std::cout << "Put test (no indices): " << dv.get(0) << " " << dv.get(1) << " [121 97]" << std::endl;
       std::cout << std::endl;  
 
    // test put() with a given index
@@ -39,14 +39,12 @@ int main()
    dv.put(105.0, 1);
    dv.put(33.0, 2);
 
-   std::cout << dv.size() << std::endl;
-
    // test get() with valid indices   
-   std::cout << "Output: " << dv.get(0) << " " << dv.get(1) << " " << dv.get(2)    << " [72 105 33]" << std::endl;
+   std::cout << "Put test (with indices): " << dv.get(0) << " " << dv.get(1) << " " << dv.get(2)    << " [72 105 33]" << std::endl;
    std::cout << std::endl;
  
    // test size()
-   std::cout << "Size of DoubleVector: " << dv.size() << "[3]" << std::endl;
+   std::cout << "Size of DoubleVector: " << dv.size() << " [3]" << std::endl;
    std::cout << std:: endl;
 
    // test get() with invalid index to catch out_of_range exception 
