@@ -10,14 +10,14 @@ CharacterVector::~CharacterVector() {}
 
 int CharacterVector::size() 
 {  
-   return ...
+   return 0;
 }
 
 // just return the character at the specified index; use the at() method rather
 // than [] so that an out_of_range error will be thrown for an invalid index
 char CharacterVector::get(int index) 
 { 
-   return ...
+   return 0;
 }
 
 // if index is size-legitimate, put the value at that index;
