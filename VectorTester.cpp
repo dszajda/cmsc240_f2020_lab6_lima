@@ -49,10 +49,10 @@ int main()
 
    // test get() with invalid index to catch out_of_range exception 
    try {
-	throw dv.get(-1);
+	dv.get(-1);
    }
-   catch (...) {
-	std::cout << "Caught out_of_range exception from get()." << std::endl;
+   catch (const std::out_of_range& e) {
+	std::cout << "Caught out_of_range exception from get():." << e.what() << std::endl;
    }	  
 
    //-------------------------------------------------------------------------
