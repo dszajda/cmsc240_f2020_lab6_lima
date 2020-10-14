@@ -126,6 +126,23 @@ cv.get(10); //Result should be out of range.
    std::cout << "appended-to CharacterVector:" << std::endl;
    std::cout << "----------------------------" << std::endl;
 
+    //test appending IntegerVector to Character Vector
+       cv2.appendIntegerVector(iv);
+          for(int i = 0; i < cv2.size(); i++)
+             {
+             	std::cout << cv2.get(i) << " ";
+             }
+             	 std::cout << std::endl;
+             	 std::cout << "[Print out expected value from iv ]" << std::endl;
+   
+   //test appending DoubleVector to Character Vector
+         cv2.appendDoubleVector(dv);
+         for(int i = 0; i < cv2.size(); i++)
+         {
+          std::cout << cv2.get(i) << " ";
+          }
+          std::cout << std::endl;
+          std::cout << "[Print out expected value from dv ]" << std::endl;
    //-------------------------------------------------------------------------
 
    // using empty DoubleVector, test appending iv & cv from above
