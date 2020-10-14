@@ -37,22 +37,18 @@ void CharacterVector::put(char value, int index)
 	else { 
 	std::cout << "Out of range. Character appended to back of vector." << std::endl;
 	characterVector.push_back(value); }
-   
 }
 
 // use push_back to append
 void CharacterVector::put(char value)
 {
-
 characterVector.push_back(value);
-
 }
 
 // for each double in doubleVector, use static_cast<char> to append as a
 // character to characterVector
 void CharacterVector::appendDoubleVector(DoubleVector& doubleVector)
 {
-
 	for (int i = 0; i < doubleVector.size(); i++){
 	characterVector.push_back(static_cast<char>(doubleVector.get(i)));
 	}
@@ -62,11 +58,9 @@ void CharacterVector::appendDoubleVector(DoubleVector& doubleVector)
 // character to characterVector
 void CharacterVector::appendIntegerVector(IntegerVector& integerVector)
 {
-
 	for (int i = 0; i < integerVector.size(); i++){
         characterVector.push_back(static_cast<char>(integerVector.get(i)));
         }
-
 }
 
 #endif

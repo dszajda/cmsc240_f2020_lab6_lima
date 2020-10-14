@@ -27,7 +27,6 @@ catch (const out_of_range& oor) {
 	cerr << "Out of range error: " << oor.what() << endl;
 	return 0;
 }
-
 }
 
 // if index is size-legitimate, put the value at that index;

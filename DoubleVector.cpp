@@ -18,7 +18,6 @@ int DoubleVector::size()
 double DoubleVector::get(int index) 
 { 
    return doubleVector.at(index);
-
 }
 
 // if index is size-legitimate, put the value at that index;
