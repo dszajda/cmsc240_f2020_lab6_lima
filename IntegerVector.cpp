@@ -36,9 +36,8 @@ void IntegerVector::put(int value, int index)
 	if (index >= 0 && index < static_cast<int>(integerVector.size())) {
 	integerVector[index] = value;
 	}else{
-	std::cout << "inside put() else statement." << std::endl;
 	integerVector.push_back(value);
-}
+	}	
 }
 
 // use push_back to append

@@ -102,18 +102,18 @@ cv.get(10); //Result should be out of range.
    std::cout << "size(): " << iv.size() << "[3]" << std::endl;
 
    //test put with indices
-   iv.put(3, 0);
-   iv.put(2, 1);
-   iv.put(1, 2);
-   iv.put(11,3); //should append
-   iv.put(12, 4); 
+   iv.put(67, 0);
+   iv.put(79, 1);
+   iv.put(77, 2);
+   iv.put(80, 3); //should append
+   iv.put(83, 4); 
 
    //check new size and get
-   std::cout << "get(0): " << iv.get(0) << "[3]" << std::endl;
-   std::cout << "get(1): " << iv.get(1) << "[2]" << std::endl;
-   std::cout << "get(2): " << iv.get(2) << "[1]" << std::endl;
-   std::cout << "get(3): " << iv.get(3) << "[11]" << std::endl;
-   std::cout << "get(4): " << iv.get(4) << "[12]" <<  std::endl;
+   std::cout << "get(0): " << iv.get(0) << "[67]" << std::endl;
+   std::cout << "get(1): " << iv.get(1) << "[79]" << std::endl;
+   std::cout << "get(2): " << iv.get(2) << "[77]" << std::endl;
+   std::cout << "get(3): " << iv.get(3) << "[80]" << std::endl;
+   std::cout << "get(4): " << iv.get(4) << "[83]" <<  std::endl;
    std::cout << "size(): " << iv.size() << "[5]" << std::endl;
 
    //-------------------------------------------------------------------------
