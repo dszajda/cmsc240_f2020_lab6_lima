@@ -75,7 +75,7 @@ cv.get(10); //Result should be out of range.
 	dv.get(-1);
    }
    catch (const std::out_of_range& e) {
-	std::cout << "Caught out_of_range exception from get():." << e.what() << std::endl;
+	std::cout << "Caught out_of_range exception from get():" << e.what() << std::endl;
    }	  
 
    //-------------------------------------------------------------------------
