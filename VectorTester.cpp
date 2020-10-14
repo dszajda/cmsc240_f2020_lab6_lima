@@ -176,19 +176,21 @@ cv.get(10); //Result should be out of range.
    
    // test appending IntegerVector to DoubleVector
    dv2.appendIntegerVector(iv);
+   std::cout << "dv2 after appending iv: ";
    for(int i = 0; i < dv2.size(); i++)
    {
 	std::cout << dv2.get(i) << " ";
    }
-   std::cout << " [3 2 1 11 12]" << std::endl;
+   std::cout << " [67 79 77 80 83]" << std::endl;
 
    // test appending CharacterVector to DoubleVector
    dv2.appendCharacterVector(cv);
+   std::cout << "dv2 after appending cv: ";
    for(int i = 0; i < dv2.size(); i++)
    {
         std::cout << dv2.get(i) << " ";
    }
-   std::cout << " [3 2 1 11 12 97 122 99 3]" << std::endl;
+   std::cout << " [67 79 77 80 83 97 122 99 3]" << std::endl;
 
    //-------------------------------------------------------------------------
 
