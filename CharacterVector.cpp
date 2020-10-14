@@ -11,7 +11,7 @@ CharacterVector::CharacterVector()  {}
 CharacterVector::~CharacterVector() {}
 
 int CharacterVector::size() 
-{  
+{
    return characterVector.size();
 }
 

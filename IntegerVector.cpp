@@ -12,7 +12,7 @@ IntegerVector::IntegerVector()  {}
 IntegerVector::~IntegerVector() {}
 
 int IntegerVector::size() 
-{
+{  
    return integerVector.size(); 
 }
 
@@ -35,7 +35,7 @@ void IntegerVector::put(int value, int index)
 {
 	if (index >= 0 && index < static_cast<int>(integerVector.size())) {
 	integerVector[index] = value;
-}else{
+	}else{
 	std::cout << "inside put() else statement." << std::endl;
 	integerVector.push_back(value);
 }
