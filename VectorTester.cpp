@@ -201,12 +201,21 @@ cv.get(10); //Result should be out of range.
    std::cout << "--------------------------" << std::endl;
    
 //append double vector, dv
-   iv2.appendDoubleVector(dv); //double check whether or not it's pointer
-   std::cout << "iv2 after appending double vector: " << "[expected depends on state of dv]" << std::endl;
-   
+   iv2.appendDoubleVector(dv);
+   std::cout << "iv2 after appending double vector: " << std::endl;
+   for(int i = 0; i < iv2.size(); i++){
+	std::cout << iv2.get(i) << " ";
+   }
+   std::cout << std::endl;
+   std::cout << "[expected value depends on value of dv from above]" << std::endl;
 //append character vector, cv
     iv2.appendCharacterVector(cv);
-    std::cout << "iv2 after appending character vector: " << "[expected depends on state of cv]" << std::endl;
+    std::cout << "iv2 after appending character vector: " << std::endl;
+    for (int i = 0; i < iv2.size(); i++){
+        std::cout << iv2.get(i) << " ";
+    }
+    std::cout << std::endl;
+    std:: cout  << "[expected depends on state of cv]" << std::endl;
    //-------------------------------------------------------------------------
 
    return 0;
