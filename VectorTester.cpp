@@ -49,6 +49,34 @@ cv.get(10); //Result should be out of range.
    std::cout << "-------------" << std::endl;
    std::cout << "DoubleVector:" << std::endl;
    std::cout << "-------------" << std::endl;
+   //test put() without an index
+   dv.put(121.0);
+   dv.put(97.0);
+
+   // test get() with valid indices
+      std::cout << "Put test (no indices): " << dv.get(0) << " " << dv.get(1) << " [121 97]" << std::endl;
+      std::cout << std::endl;  
+
+   // test put() with a given index
+   dv.put(72.0, 0);
+   dv.put(105.0, 1);
+   dv.put(33.0, 2);
+
+   // test get() with valid indices   
+   std::cout << "Put test (with indices): " << dv.get(0) << " " << dv.get(1) << " " << dv.get(2)    << " [72 105 33]" << std::endl;
+   std::cout << std::endl;
+ 
+   // test size()
+   std::cout << "Size of DoubleVector: " << dv.size() << " [3]" << std::endl;
+   std::cout << std:: endl;
+
+   // test get() with invalid index to catch out_of_range exception 
+   try {
+	dv.get(-1);
+   }
+   catch (const std::out_of_range& e) {
+	std::cout << "Caught out_of_range exception from get():." << e.what() << std::endl;
+   }	  
 
    //-------------------------------------------------------------------------
 
@@ -107,6 +135,24 @@ cv.get(10); //Result should be out of range.
    std::cout << "-------------------------" << std::endl;
    std::cout << "appended-to DoubleVector:" << std::endl;
    std::cout << "-------------------------" << std::endl;
+   
+   // test appending IntegerVector to DoubleVector
+   dv2.appendIntegerVector(iv);
+   for(int i = 0; i < dv2.size(); i++)
+   {
+	std::cout << dv2.get(i) << " ";
+   }
+   std::cout << std::endl;
+   std::cout << "[expected value depends on value of iv from above]" << std::endl;
+
+   // test appending CharacterVector to DoubleVector
+   dv2.appendCharacterVector(cv);
+   for(int i = 0; i < dv2.size(); i++)
+   {
+        std::cout << dv2.get(i) << " ";
+   }
+   std::cout << std::endl;
+   std::cout << "[expected value depends on value of cv from above]" << std::endl;
 
    //-------------------------------------------------------------------------
 
@@ -119,12 +165,12 @@ cv.get(10); //Result should be out of range.
    std::cout << "--------------------------" << std::endl;
    
 //append double vector, dv
-   iv2.appendDoubleVector(*dv); //double check whether or not it's pointer
-   std::cout << "iv2 after appending double vector: " << "[expected depends on state of dv]" <<endl;
+   iv2.appendDoubleVector(dv); //double check whether or not it's pointer
+   std::cout << "iv2 after appending double vector: " << "[expected depends on state of dv]" << std::endl;
    
 //append character vector, cv
-    iv2.appendCharacterVector(*cv);
-    std::cout << "iv2 after appending character vector: " << "[expected depends on state of cv]" <<endl;
+    iv2.appendCharacterVector(cv);
+    std::cout << "iv2 after appending character vector: " << "[expected depends on state of cv]" << std::endl;
    //-------------------------------------------------------------------------
 
    return 0;
