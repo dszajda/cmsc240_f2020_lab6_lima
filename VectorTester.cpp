@@ -17,16 +17,17 @@ int main()
    std::cout << "----------------" << std::endl;
    std::cout << "CharacterVector:" << std::endl;
    std::cout << "----------------" << std::endl;
-std::cout<< "Test put() method - put a, b, and c in the vector." << std::endl;
-cv.put('a');
-cv.put('b');
-cv.put('c');
 
-std::cout<< "Test get method to display results of our new vector: " << std::endl;
+    std::cout<< "Test put() method - put a, b, and c in the vector." << std::endl;
+    cv.put('a');
+    cv.put('b');
+    cv.put('c');
+
+std::cout<< "Display results of our new vector and test get method: " << std::endl;
 
 for(int i=0; i < cv.size(); i++){
    std::cout << cv.get(i) << std::endl;
- }
+   }
 
 std::cout<< "Testing the other put method with two parameters: output should be a z c" << std::endl;
 cv.put( 'z', 1);
@@ -35,12 +36,16 @@ for(int i=0; i < cv.size(); i++){
    std::cout << cv.get(i) << std::endl;
  } 
 
-std::cout<< "Testing size: " << std::endl;
+std::cout<< "Print size: " << std::endl;
 std::cout << cv.size() << std::endl;
 
-std::cout<<"Testing out-of-range" << std::endl;
+std::cout<<"Testing out-of-range: Attempt to put 'd' at position 3. Output should be out of range." << std::endl;
+
 cv.put(3, 'd'); // The values in the vector at this point are a, z, c, adding d at 3 should be out of range.
+
+std::cout<<"Testing out-of-range for get method: Attempt to get() something at index 10. Output should be out of range." << std::endl;
 cv.get(10); //Result should be out of range.
+
    //-------------------------------------------------------------------------
 
    // test DoubleVector: put, get, size, out_of_range
@@ -126,23 +131,39 @@ cv.get(10); //Result should be out of range.
    std::cout << "appended-to CharacterVector:" << std::endl;
    std::cout << "----------------------------" << std::endl;
 
-    //test appending IntegerVector to Character Vector
-       cv2.appendIntegerVector(iv);
+   //This is what's currently in iv that will be appended
+   std::cout << "This is what's in iv right now: " << std::endl;
+	  for(int i = 0; i < iv.size(); i++)
+             {
+                std::cout << iv.get(i) << " ";
+             }
+		std::cout << std::endl;
+   
+   //test appending IntegerVector to Character Vector
+   std::cout<< " Print new appended vector: " << std :: endl;      
+   cv2.appendIntegerVector(iv);
           for(int i = 0; i < cv2.size(); i++)
              {
              	std::cout << cv2.get(i) << " ";
              }
-             	 std::cout << std::endl;
-             	 std::cout << "[Print out expected value from iv ]" << std::endl;
-   
+             std::cout << std::endl;
+  
+   // This is what is currently in dv that will be appended
+   std::cout << "This is what's in dv right now: " << std::endl;
+          for(int i = 0; i < dv.size(); i++)
+             {
+                std::cout << dv.get(i) << " ";
+             }
+   		std::cout << std::endl;
    //test appending DoubleVector to Character Vector
-         cv2.appendDoubleVector(dv);
+        std::cout << "Print new appended vector: " <<std::endl;
+	 cv2.appendDoubleVector(dv);
          for(int i = 0; i < cv2.size(); i++)
          {
           std::cout << cv2.get(i) << " ";
           }
           std::cout << std::endl;
-          std::cout << "[Print out expected value from dv ]" << std::endl;
+
    //-------------------------------------------------------------------------
 
    // using empty DoubleVector, test appending iv & cv from above
