@@ -17,7 +17,11 @@ int DoubleVector::size()
 // than [] so that an out_of_range error will be thrown for an invalid index
 double DoubleVector::get(int index) 
 { 
+<<<<<<< HEAD
    return 0.0;
+=======
+   return 0;
+>>>>>>> a5160144adf09aa183aac9b2662dc8ba0b640ea9
 }
 
 // if index is size-legitimate, put the value at that index;
