@@ -80,7 +80,7 @@ cv.get(10); //Result should be out of range.
 	dv.get(-1);
    }
    catch (const std::out_of_range& e) {
-	std::cout << "Caught out_of_range exception from get():." << e.what() << std::endl;
+	std::cout << "Caught out_of_range exception from get(): " << e.what() << std::endl;
    }	  
 
    //-------------------------------------------------------------------------
@@ -164,8 +164,7 @@ cv.get(10); //Result should be out of range.
    {
 	std::cout << dv2.get(i) << " ";
    }
-   std::cout << std::endl;
-   std::cout << "[expected value depends on value of iv from above]" << std::endl;
+   std::cout << " [3 2 1 11 12]" << std::endl;
 
    // test appending CharacterVector to DoubleVector
    dv2.appendCharacterVector(cv);
@@ -173,8 +172,7 @@ cv.get(10); //Result should be out of range.
    {
         std::cout << dv2.get(i) << " ";
    }
-   std::cout << std::endl;
-   std::cout << "[expected value depends on value of cv from above]" << std::endl;
+   std::cout << " [3 2 1 11 12 97 122 99 3]" << std::endl;
 
    //-------------------------------------------------------------------------
 
